@@ -76,7 +76,8 @@
 
 				<section>
 					<section>
-						<h1>Performance</h1>
+						<h2>Performance</h2>
+						<p>How we made this thing fast.</p>
 					</section>
 					<section>
 						<h2>Async Panning &amp; Zooming (APZ)</h2>
@@ -89,34 +90,91 @@
 						<h2>OOM killer</h2>
 						<img width="400" src="img/performance-oom-killer-download-ram.png" alt="Download more ram.">
 					</section>
+					<section>
+						<h2>Pre-allocated Process</h2>
+						<p>A process is created after app launch, and waits for the next process to take its place.</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Performance Tools</h2>
-					<p>The same tools that developers are used to.</p>
-					<ul>
-						<li>Paint flashing.</li>
-						<li>Profile and timeline support.</li>
-						<li>On-device HUD.</li>
-					</ul>
+					<section>
+						<h2>Performance Tools</h2>
+						<p>Integrated tools to help us solve performance problems.</p>
+					</section>
+					<section>
+						<h2>Developer HUD</h2>
+						<img height="500" src="img/developer-tools-hud-overlay.png" alt="Developer HUD">
+					</section>
+					<section>
+						<h2>Additional tools include:</h2>
+						<ul>
+							<li>Paint flashing.</li>
+							<li>Profile and timeline support.</li>
+							<li>On-device HUD.</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>What is an app, anyway?</h2>
-					<ul>
-						<li>Packaged Apps</li>
-						<li>Hosted App</li>
-					</ul>
+					<section>
+						<h2>Developer Tools</h2>
+						<p>The same tools that empower web developers.</p>
+					</section>
+					<section>
+						<h2>WebIDE</h2>
+						<img src="img/developer-tools-webide-debugging.png">
+					</section>
 				</section>
 
 				<section>
-					<h2>Permissions</h2>
+					<section>
+						<h2>Applications</h2>
+						<p>Packaged vs. Hosted</p>
+					</section>
+					<section>
+						<h2>Packaged Apps</h2>
+						<ul>
+							<li>An open web app which is downloaded and installed from a marketplace or any website.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Hosted Apps</h2>
+						<ul>
+							<li>An open web app which has all of its resources (HTML, CSS, JS, manifest) on a webserver.</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>Security</h2>
-					<p>Each app runs in its own process.</p>
-					<img src="img/security-app-execution-space.png">
+					<section>
+						<h2>Permissions</h2>
+					</section>
+					<section>
+						<h2>App Permission Levels</h2>
+						<strong>Web</strong>
+						<p>APIs that are considered safe and don't expose private info. Granted by default or with a prompt.</p>
+						<strong>Privileged</strong>
+						<p>Signed apps by a marketplace. Allows access to additional APIs such as Contacts, SystemXHR, TCP socket.</p>
+						<strong>Certified</strong>
+						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Security</h2>
+						<p>Keeping users safe.</p>
+					</section>
+					<section>
+						<h2>Out of Process</h2>
+						<p>Each app runs in its own process.</p>
+						<img src="img/security-app-execution-space.png">
+					</section>
+					<section>
+						<h2>Content Security Policy</h2>
+						<p>Mitigates XSS and data injection attacks.</p>
+						<p>Restricts origins of executable scripts.</p>
+					</section>
 				</section>
 
 				<section>

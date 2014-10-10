@@ -1,0 +1,15 @@
+#first {
+	text-align: left;
+	position: relative;
+}
+
+#first::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: '';
+	background: url(../img/fxoslogo.png) no-repeat right 0/300px;
+	display: block;
+	height: 100%;
+	width: 100%;
+}

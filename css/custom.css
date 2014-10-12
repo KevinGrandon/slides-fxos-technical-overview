@@ -19,3 +19,61 @@ img.none {
 	background: none !important;
 	box-shadow: none !important;
 }
+
+/**
+ * For gaia architecture frame layout
+ */
+#appframes {
+	height: 410px;
+	width: 600px;
+	position: relative;
+	top: 0px;
+	left: calc(50% - 320px);
+	font-size: 1rem;
+}
+
+#appframes .appframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 8px dashed #777777;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+#appframes .appframe.system {
+	height: 100%;
+	width: 100%;
+	line-height: 720px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 1.5rem;
+}
+
+#appframes .appframe.col {
+	width: calc(500px / 3);
+	height: 200px;
+	top: 20px;
+}
+
+#appframes .appframe.homescreen {
+	left: 30px;
+}
+
+#appframes .appframe.browser1 {
+	left: calc(520px / 3 + 42px);
+}
+
+#appframes .appframe.browser2 {
+	right: 30px;
+	left: auto;
+}
+
+#appframes .appframe.keyboard {
+	left: 30px;
+	right: 30px;
+	top: 240px;
+	height: 90px;
+}
+

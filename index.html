@@ -208,7 +208,7 @@
 						<img src="img/webapi.png">
 					</section>
 					<section>
-						<h3>Sample Vibration API</h3>
+						<h3>Vibration API</h3>
 						<pre><code class="javascript">
 							// Vibrate the phone for 200ms
 							window.navigator.vibrate(200);
@@ -217,8 +217,83 @@
 							window.navigator.vibrate([200, 100, 200]);
 						</code></pre>
 					</section>
-				</section>
+					<section>
+						<h3>Battery Status API</h3>
+						<pre><code class="javascript">
+var battery = navigator.battery;
 
+function updateBatteryStatus() {
+  console.log("Battery status: " + battery.level * 100 + " %");
+
+  if (battery.charging) {
+    console.log("Battery is charging");
+  }
+}
+
+battery.addEventListener("chargingchange", updateBatteryStatus);
+battery.addEventListener("levelchange", updateBatteryStatus);
+						</code></pre>
+					</section>
+					<section>
+						<h3>Telephony API</h3>
+						<pre><code class="javascript">
+// Telephony object
+var tel = navigator.mozTelephony;
+
+// Check if the phone is muted (read/write property)
+console.log(tel.muted);
+
+// Check if the speaker is enabled (read/write property)
+console.log(tel.speakerEnabled);
+
+// Place a call
+var call = tel.dial("123456789");
+
+// Events for that call
+call.onstatechange = function (event) {
+    /*
+        Possible values for state:
+        "dialing", "ringing", "busy", "connecting", "connected", 
+        "disconnecting", "disconnected", "incoming"
+    */
+    console.log(event.state);
+};
+
+// Above options as direct events
+call.onconnected = function () {
+    // Call was connected
+};
+
+call.ondisconnected = function () {
+    // Call was disconnected
+};
+
+// Receiving a call
+tel.onincoming = function (event) {
+    var incomingCall = event.call;
+
+    // Get the number of the incoming call
+    console.log(incomingCall.number);
+
+    // Answer the call
+    incomingCall.answer();
+};
+
+// Disconnect a call
+call.hangUp();
+
+
+// Iterating over calls, and taking action depending on their changed status
+tel.oncallschanged = function (event) {
+    tel.calls.forEach(function (call) {
+        // Log the state of each call
+        console.log(call.state); 
+    });
+};
+
+						</code></pre>
+					</section>
+				</section>
 				<section>
 					<h1>Thanks!</h1>
 					<p>

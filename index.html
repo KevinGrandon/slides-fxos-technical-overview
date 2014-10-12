@@ -129,20 +129,21 @@
 						</p>
 					</section>
 					<section>
-						<h2>Packaged Apps</h2>
-						<ul>
-							<li>An open web app which is downloaded and installed from a marketplace or any website.</li>
-						</ul>
-					</section>
-					<section>
 						<h2>Hosted Apps</h2>
 						<ul>
 							<li>An open web app which has all of its resources (HTML, CSS, JS, manifest) on a webserver.</li>
+							<li>If you have a website, you can have a hosted app!</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Marketplace == Hosted App</h2>
 						<img src="img/applications-hosted-firefox-marketplace.png" alt="Firefox Marketplace">
+					</section>
+					<section>
+						<h2>Packaged Apps</h2>
+						<ul>
+							<li>An open web app which is downloaded and installed from a marketplace or any website.</li>
+						</ul>
 					</section>
 					<section>
 						<h2>Simple App Structure</h2>
@@ -214,84 +215,6 @@
 
 				<section>
 					<section>
-						<h2>Web Components</h2>
-						<p>Building blocks for developers.</p>
-					</section>
-					<section>
-						<h3>"Making things look right is hard."</h3>
-						<p>We're building a comphrensive suite of web components for developers.</p>
-						<p>Components are self-contained and allow for developers to be up and running quickly.</p>
-						<p>Scoped CSS prevents components from conflicting with each other, and your app code.</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Graphics</h2>
-						<p>Making FirefoxOS beautiful.</p>
-					</section>
-					<section>
-						<ul>
-							<li>Hints for layerizing content.</li>
-							<li>CSSOM APIs - Smooth Scrolling</li>
-							<li>APIs for developers - scrollgrab</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Performance</h2>
-						<p>How we made this thing fast.</p>
-					</section>
-					<section>
-						<h2>Async Panning &amp; Zooming (APZ)</h2>
-						<ul>
-							<li>Perform panning and zooming asynchronously on the compositor thread rather than the main thread.</li>
-							<li>Javascript can not block scrolling.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>OOM killer</h2>
-						<img width="400" src="img/performance-oom-killer-download-ram.png" alt="Download more ram.">
-					</section>
-					<section>
-						<h2>Pre-allocated Process</h2>
-						<p>A process is created after app launch, and waits for the next process to take its place.</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Performance Tools</h2>
-						<p>Integrated tools to help us solve performance problems.</p>
-					</section>
-					<section>
-						<h2>Developer HUD</h2>
-						<img height="500" src="img/developer-tools-hud-overlay.png" alt="Developer HUD">
-					</section>
-					<section>
-						<h2>Additional tools include:</h2>
-						<ul>
-							<li>Paint flashing.</li>
-							<li>Profile and timeline support.</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Developer Tools</h2>
-						<p>The same tools that empower web developers.</p>
-					</section>
-					<section>
-						<h2>WebIDE</h2>
-						<img src="img/developer-tools-webide-debugging.png">
-					</section>
-				</section>
-
-				<section>
-					<section>
 						<h2>Permissions</h2>
 					</section>
 					<section>
@@ -302,23 +225,6 @@
 						<p>Signed apps by a marketplace. Allows access to additional APIs such as Contacts, SystemXHR, TCP socket.</p>
 						<strong>Certified</strong>
 						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone.</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Security</h2>
-						<p>Keeping users safe.</p>
-					</section>
-					<section>
-						<h2>Out of Process</h2>
-						<p>Each app runs in its own process.</p>
-						<img src="img/security-app-execution-space.png">
-					</section>
-					<section>
-						<h2>Content Security Policy</h2>
-						<p>Mitigates XSS and data injection attacks.</p>
-						<p>Restricts origins of executable scripts.</p>
 					</section>
 				</section>
 
@@ -414,6 +320,102 @@ tel.oncallschanged = function (event) {
 						</code></pre>
 					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>Security</h2>
+						<p>Keeping users safe.</p>
+					</section>
+					<section>
+						<h2>Out of Process</h2>
+						<p>Each app runs in its own process.</p>
+						<img src="img/security-app-execution-space.png">
+					</section>
+					<section>
+						<h2>Content Security Policy</h2>
+						<p>Mitigates XSS and data injection attacks.</p>
+						<p>Restricts origins of executable scripts.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Web Components</h2>
+						<p>Building blocks for developers.</p>
+					</section>
+					<section>
+						<h3>"Making things look right is hard."</h3>
+						<p>We're building a comphrensive suite of web components for developers.</p>
+						<p>Components are self-contained and allow for developers to be up and running quickly.</p>
+						<p>Scoped CSS prevents components from conflicting with each other, and your app code.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Graphics</h2>
+						<p>Making FirefoxOS beautiful.</p>
+					</section>
+					<section>
+						<ul>
+							<li>Hints for layerizing content.</li>
+							<li>CSSOM APIs - Smooth Scrolling</li>
+							<li>APIs for developers - scrollgrab</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Performance</h2>
+						<p>How we made this thing fast.</p>
+					</section>
+					<section>
+						<h2>Async Panning &amp; Zooming (APZ)</h2>
+						<ul>
+							<li>Perform panning and zooming asynchronously on the compositor thread rather than the main thread.</li>
+							<li>Javascript can not block scrolling.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>OOM killer</h2>
+						<img width="400" src="img/performance-oom-killer-download-ram.png" alt="Download more ram.">
+					</section>
+					<section>
+						<h2>Pre-allocated Process</h2>
+						<p>A process is created after app launch, and waits for the next process to take its place.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Performance Tools</h2>
+						<p>Integrated tools to help us solve performance problems.</p>
+					</section>
+					<section>
+						<h2>Developer HUD</h2>
+						<img height="500" src="img/developer-tools-hud-overlay.png" alt="Developer HUD">
+					</section>
+					<section>
+						<h2>Additional tools include:</h2>
+						<ul>
+							<li>Paint flashing.</li>
+							<li>Profile and timeline support.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Developer Tools</h2>
+						<p>The same tools that empower web developers.</p>
+					</section>
+					<section>
+						<h2>WebIDE</h2>
+						<img src="img/developer-tools-webide-debugging.png">
+					</section>
+				</section>
+
 				<section>
 					<h1>Thanks!</h1>
 					<p>

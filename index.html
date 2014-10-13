@@ -402,6 +402,40 @@ tel.oncallschanged = function (event) {
 						<h2>AppCache Example</h2>
 						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
 					</section>
+					<section>
+						<h2>Service Workers</h2>
+						<pre><code class="javascript">
+// Service worker registration in app.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service_worker.js', {
+    scope: '/'
+  }).then(function(sw) {
+    // registration worked
+    console.log('Registration succeeded.');
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+						</code></pre>
+						<pre><code class="javascript">
+// Service worker in service_worker.js
+this.addEventListener('fetch', function(event) {
+  var cachedResponse = caches.match(event.request).catch(function() {
+    return event.default().then(function(response) {
+      return caches.get('v1').then(function(cache) {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    });
+  }).catch(function() {
+    return caches.match('/caches/notFound.jpg');
+  });
+
+  event.respondWith(cachedResponse);
+});
+						</code></pre>
+					</section>
 				</section>
 
 				<section>

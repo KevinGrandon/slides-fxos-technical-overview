@@ -230,11 +230,19 @@
 					</section>
 					<section>
 						<h2>Installed Web Apps</h2>
+						<p>Lesser security requirements as privileged/certified apps and not subject to CSP. Not able to use privileged or certified APIs.</p>
+					</section>
+					<section>
+						<h2>Privileged Web Apps</h2>
 						<p>Signed apps by a marketplace. Allows access to additional APIs such as Contacts, SystemXHR, TCP socket.</p>
 					</section>
 					<section>
 						<h2>Certified Web Apps</h2>
-						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone.</p>
+						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone. Gives API access to things like telephony, power and wifi management. There is a long-term goal is to harden APIs and allow access to privileged apps.</p>
+					</section>
+					<section>
+						<img height="500" src="img/permissions-chart.png" alt="Permissions chart">
+						<p>See more: <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">https://developer.mozilla.org/en-US/Apps/Build/App_permissions</a></p>
 					</section>
 				</section>
 

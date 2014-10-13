@@ -215,39 +215,6 @@
 
 				<section>
 					<section>
-						<h2>Permissions</h2>
-					</section>
-					<section id="permission-levels">
-						<h3>From least to most access.</h3>
-						<div class="level web">Web Content <em>(Least Access)</em></div>
-						<div class="level installed">Installed Web App</div>
-						<div class="level privileged">Privileged Web App</div>
-						<div class="level certified">Certified Web App <em>(Most Access, Critical to the OS)</em></div>
-					</section>
-					<section>
-						<h2>Web Content</h2>
-						<p>APIs that are considered safe and don't expose private info. Granted by default or with a prompt.</p>
-					</section>
-					<section>
-						<h2>Installed Web Apps</h2>
-						<p>Lesser security requirements as privileged/certified apps and not subject to CSP. Not able to use privileged or certified APIs.</p>
-					</section>
-					<section>
-						<h2>Privileged Web Apps</h2>
-						<p>Signed apps by a marketplace. Allows access to additional APIs such as Contacts, SystemXHR, TCP socket.</p>
-					</section>
-					<section>
-						<h2>Certified Web Apps</h2>
-						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone. Gives API access to things like telephony, power and wifi management. There is a long-term goal is to harden APIs and allow access to privileged apps.</p>
-					</section>
-					<section>
-						<img height="500" src="img/permissions-chart.png" alt="Permissions chart">
-						<p>See more: <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">https://developer.mozilla.org/en-US/Apps/Build/App_permissions</a></p>
-					</section>
-				</section>
-
-				<section>
-					<section>
 						<h2>WebAPI</h2>
 						<img src="img/webapi.png">
 					</section>
@@ -341,6 +308,39 @@ tel.oncallschanged = function (event) {
 
 				<section>
 					<section>
+						<h2>Permissions</h2>
+					</section>
+					<section id="permission-levels">
+						<h3>From least to most access.</h3>
+						<div class="level web">Web Content <em>(Least Access)</em></div>
+						<div class="level installed">Installed Web App</div>
+						<div class="level privileged">Privileged Web App</div>
+						<div class="level certified">Certified Web App <em>(Most Access, Critical to the OS)</em></div>
+					</section>
+					<section>
+						<h2>Web Content</h2>
+						<p>APIs that are considered safe and don't expose private info. Granted by default or with a prompt.</p>
+					</section>
+					<section>
+						<h2>Installed Web Apps</h2>
+						<p>Lesser security requirements as privileged/certified apps and not subject to CSP. Not able to use privileged or certified APIs.</p>
+					</section>
+					<section>
+						<h2>Privileged Web Apps</h2>
+						<p>Signed apps by a marketplace. Allows access to additional APIs such as Contacts, SystemXHR, TCP socket.</p>
+					</section>
+					<section>
+						<h2>Certified Web Apps</h2>
+						<p>Includes sensitive APIs and is only available to apps pre-installed on the phone. Gives API access to things like telephony, power and wifi management. There is a long-term goal is to harden APIs and allow access to privileged apps.</p>
+					</section>
+					<section>
+						<img height="500" src="img/permissions-chart.png" alt="Permissions chart">
+						<p>See more: <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">https://developer.mozilla.org/en-US/Apps/Build/App_permissions</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<h2>Security</h2>
 						<p>Keeping users safe.</p>
 					</section>
@@ -357,15 +357,15 @@ tel.oncallschanged = function (event) {
 					<section>
 						<h2>Security Framework</h2>
 						<img src="img/security-framework.png" alt="Security Framework">
-						<aside class="notes">
-					    Permission Manager: Gateway to accessing functionality in the Web API, which is the only access to the underlying hardware.
-					    Access Control List: Matrix of roles and permissions required to access Web API functionality.
-					    Credential Validation: Authentication of apps/users.
-					    Permissions Store: Set of privileges required to access Web API functionality.
-						</aside>
 					</section>
 					<section>
-						<p>See more: <a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model">https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model</a></p>
+						<ul>
+					    	<li>Permission Manager: Gateway to accessing functionality in the Web API, which is the only access to the underlying hardware.</li>
+					    	<li>Access Control List: Matrix of roles and permissions required to access Web API functionality.</li>
+					    	<li>Credential Validation: Authentication of apps/users.v
+					    	<li>Permissions Store: Set of privileges required to access Web API functionality.</li>
+						</ul>
+						<p><a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model">https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model</a></p>
 					</section>
 				</section>
 

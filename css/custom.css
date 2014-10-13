@@ -77,3 +77,61 @@ img.none {
 	height: 90px;
 }
 
+
+/**
+ * Permissions
+ */
+#permission-levels .level {
+	padding: 20px 0;
+	color: #000;
+	position: relative;;
+}
+
+#permission-levels .level.web {
+	background: #fc0e0e;
+}
+
+#permission-levels div.level.installed::after {
+	border-top-color: #fc0e0e;
+}
+
+#permission-levels .level.installed {
+	background: #f8931f;
+}
+
+#permission-levels div.level.privileged::after {
+	border-top-color: #f8931f;
+}
+
+#permission-levels .level.privileged {
+	background: #f3df06;
+}
+
+#permission-levels div.level.certified::after {
+	border-top-color: #f3df06;
+}
+
+#permission-levels .level.certified {
+	background: #17ad42;
+}
+
+/* arrow for permission levels */
+#permission-levels .level.installed::after,
+#permission-levels .level.privileged::after,
+#permission-levels .level.certified::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid #fff;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 7.5px);
+}
+
+#permission-levels .level em {
+	font-size: 1.5rem;
+}

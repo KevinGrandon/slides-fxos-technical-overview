@@ -64,17 +64,6 @@
 							<li class="fragment">Develop as they would for the web.</li>
 						</ul>
 					</section>
-					<section>
-						<h2>Great offline experiences</h2>
-						<ul>
-							<li>Apps can work just as well offline as they work online.</li>
-							<li>App Cache and Service Workers (coming soon) authors will have full contorl over the offline experience.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>AppCache Example</h2>
-						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
-					</section>
 				</section>
 
 				<section>
@@ -355,6 +344,16 @@ tel.oncallschanged = function (event) {
 						<p>Restricts origins of executable scripts.</p>
 					</section>
 					<section>
+						<h2>Secure Update process</h2>
+						<img src="img/security-updateprocess.png" alt="Security - Update Process">
+						<ul>
+							<li>Updates to packages are downloaded from an authorized Marketplace and are verified for:</li>
+							<li>Update origin (verify the source location protocol:domain:port of the update and manifest)</li>
+							<li>File integrity (SHA-256 hash check)</li>
+							<li>Code signature (certificate check against a trusted root)</li>t
+						</ul>
+					</section>
+					<section>
 						<h2>Security Framework</h2>
 						<img src="img/security-framework.png" alt="Security Framework">
 					</section>
@@ -379,6 +378,20 @@ tel.oncallschanged = function (event) {
 						<p>We're building a comphrensive suite of web components for developers.</p>
 						<p>Components are self-contained and allow for developers to be up and running quickly.</p>
 						<p>Scoped CSS prevents components from conflicting with each other, and your app code.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Great offline experiences</h2>
+						<ul>
+							<li>Apps can work just as well offline as they work online.</li>
+							<li>App Cache and Service Workers (coming soon) authors will have full contorl over the offline experience.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>AppCache Example</h2>
+						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
 					</section>
 				</section>
 

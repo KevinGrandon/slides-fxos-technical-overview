@@ -235,6 +235,15 @@ battery.addEventListener("levelchange", updateBatteryStatus);
 						</code></pre>
 					</section>
 					<section>
+						<h3>Mobile Message API</h3>
+						<pre><code class="javascript">
+var message = "Hi!";
+var number = "1234";
+
+navigator.mozMobileMessage.send(number, message);
+						</code></pre>
+					</section>
+					<section>
 						<h3>Telephony API</h3>
 						<pre><code class="javascript">
 // Telephony object

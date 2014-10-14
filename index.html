@@ -235,6 +235,22 @@ battery.addEventListener("levelchange", updateBatteryStatus);
 						</code></pre>
 					</section>
 					<section>
+						<h3>Contacts API</h3>
+						<pre><code class="javascript">
+var person = new mozContact();
+person.givenName  = ["John"];
+person.familyName = ["Doe"];
+person.nickname   = ["No kidding"];
+
+var person = new mozContact(contactData);
+
+// save the new contact
+navigator.mozContacts.save(person).then(() => {
+	console.log('new contact saved');
+});
+						</code></pre>
+					</section>
+					<section>
 						<h3>Mobile Message API</h3>
 						<pre><code class="javascript">
 var message = "Hi!";

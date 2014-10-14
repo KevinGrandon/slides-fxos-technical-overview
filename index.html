@@ -318,6 +318,34 @@ tel.oncallschanged = function (event) {
 
 						</code></pre>
 					</section>
+					<section>
+						<h3>Device Storage API</h3>
+						<pre><code class="javascript">
+var storage = navigator.getDeviceStorage("videos"),
+	cursor = storage.enumerate();
+
+cursor.onerror = function() {
+	console.error("Error in DeviceStorage.enumerate()", cursor.error.name);
+};
+cursor.onsuccess = function() {
+	if (!cursor.result)
+		return;
+
+	var file = cursor.result;
+	// If this isn't a video, skip it
+	if (file.type.substring(0, 6) !== "video/") {
+		cursor.continue();
+		return;
+	}
+	// If it isn't playable, skip it
+	var testplayer = document.createElement("video");
+	if (!testplayer.canPlayType(file.type)) {
+		cursor.continue();
+		return;
+	}
+}
+						</code></pre>
+					</section>
 				</section>
 
 				<section>

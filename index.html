@@ -119,9 +119,11 @@
 					</section>
 					<section>
 						<h2>Hosted Apps</h2>
-						<ul>
-							<li>An open web app which has all of its resources (HTML, CSS, JS, manifest) on a webserver.</li>
-							<li>If you have a website, you can have a hosted app!</li>
+						<ul></li>
+							<li>A normal website with a manifest.</li>
+							<li>Gives you the UX of an "app".</li>
+							<li>Browser chrome if you want it.</li>
+							<li>Additional access to APIs and storage.</li>
 						</ul>
 					</section>
 					<section>
@@ -132,7 +134,8 @@
 					<section>
 						<h2>Packaged Apps</h2>
 						<ul>
-							<li>An open web app which is downloaded and installed from a marketplace or any website.</li>
+							<li>A bundled website, downloaded and installed from a marketplace or any website.</li>
+							<li>Gives you the same UX and access as a hosted app.</li>
 						</ul>
 					</section>
 					<section>
@@ -201,6 +204,21 @@
 }
 						</code></pre>
 					</section>
+					<section>
+						<h2>App Scope / Linking</h2>
+						<ul>
+							<li>Linking to web content will open that content in an app.</li>
+							<li>E.g., linking to a tweet / youtube video will open in that app.</li>
+							<li>Specified in the manifest with the 'scope' property.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Instant</h2>
+						<ul>
+							<li>Based on the web - no need to install apps.</li>
+							<li>Launch a packaged app instantly, and save it with bookmarking if you want.</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
@@ -218,6 +236,10 @@
 					<section>
 						<h2>AppCache Example</h2>
 						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
+					</section>
+					<section>
+						<h2>Packaged Apps</h2>
+						<p>Packaged apps are the easiest way to get your app working offline.</p>
 					</section>
 					<section>
 						<h2>Service Workers</h2>
@@ -256,8 +278,8 @@ this.addEventListener('fetch', function(event) {
 					<section>
 						<h3>What does this give you?</h3>
 						<ul>
-							<li class="fragment">Website + Manifest = Icon, APIs, Storage</li>
-							<li class="fragment">+ Service Workers = Great offline experiences.</li>
+							<li class="fragment">Website + Manifest = Hosted App</li>
+							<li class="fragment">Hosted App + Service Workers = Great offline experiences.</li>
 							<li class="fragment">Granular cache control and background data sync capabilities.</li>
 						</ul>
 					</section>
@@ -533,6 +555,13 @@ cursor.onsuccess = function() {
 					<section>
 						<h2>Pre-allocated Process</h2>
 						<p>A process is created after app launch, and waits for the next process to take its place.</p>
+					</section>
+					<section>
+						<h2>Hardware Accelerated Video</h2>
+						<ul>
+							<li>Web video with hardware acceleration.</li>
+							<li>High quality video.</li>
+						</ul>
 					</section>
 					<section>
 						<h2>Hardware Accelerated Animations</h2>

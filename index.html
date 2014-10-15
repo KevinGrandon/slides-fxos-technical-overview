@@ -125,8 +125,9 @@
 						</ul>
 					</section>
 					<section>
-						<h2>Marketplace == Hosted App</h2>
-						<img src="img/applications-hosted-firefox-marketplace.png" alt="Firefox Marketplace">
+						<h2>Examples of Hosted Apps</h2>
+						<img width="400" src="img/apps-facebook.png" alt="Firefox Marketplace">
+						<img width="400" src="img/apps-twitter.png" alt="Firefox Marketplace">
 					</section>
 					<section>
 						<h2>Packaged Apps</h2>
@@ -198,6 +199,58 @@
     },
     "orientation": "default"
 }
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Great offline experiences</h2>
+						<ul>
+							<li>Apps can work just as well offline as they work online.</li>
+							<li>App Cache and Service Workers (coming soon) authors will have full contorl over the offline experience.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>AppCache Manifest</h2>
+						<img src="img/offline-appcache-manifest.png" alt="Offline app cache manifest example.">
+					</section>
+					<section>
+						<h2>AppCache Example</h2>
+						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
+					</section>
+					<section>
+						<h2>Service Workers</h2>
+						<pre><code class="javascript">
+// Service worker registration in app.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service_worker.js', {
+    scope: '/'
+  }).then(function(sw) {
+    // registration worked
+    console.log('Registration succeeded.');
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+						</code></pre>
+						<pre><code class="javascript">
+// Service worker in service_worker.js
+this.addEventListener('fetch', function(event) {
+  var cachedResponse = caches.match(event.request).catch(function() {
+    return event.default().then(function(response) {
+      return caches.get('v1').then(function(cache) {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    });
+  }).catch(function() {
+    return caches.match('/caches/notFound.jpg');
+  });
+
+  event.respondWith(cachedResponse);
+});
 						</code></pre>
 					</section>
 				</section>
@@ -441,58 +494,6 @@ cursor.onsuccess = function() {
 
 				<section>
 					<section>
-						<h2>Great offline experiences</h2>
-						<ul>
-							<li>Apps can work just as well offline as they work online.</li>
-							<li>App Cache and Service Workers (coming soon) authors will have full contorl over the offline experience.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>AppCache Manifest</h2>
-						<img src="img/offline-appcache-manifest.png" alt="Offline app cache manifest example.">
-					</section>
-					<section>
-						<h2>AppCache Example</h2>
-						<img src="img/appcache-diagram.png" alt="Appcache" height="500">
-					</section>
-					<section>
-						<h2>Service Workers</h2>
-						<pre><code class="javascript">
-// Service worker registration in app.
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service_worker.js', {
-    scope: '/'
-  }).then(function(sw) {
-    // registration worked
-    console.log('Registration succeeded.');
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-}
-						</code></pre>
-						<pre><code class="javascript">
-// Service worker in service_worker.js
-this.addEventListener('fetch', function(event) {
-  var cachedResponse = caches.match(event.request).catch(function() {
-    return event.default().then(function(response) {
-      return caches.get('v1').then(function(cache) {
-        cache.put(event.request, response.clone());
-        return response;
-      });
-    });
-  }).catch(function() {
-    return caches.match('/caches/notFound.jpg');
-  });
-
-  event.respondWith(cachedResponse);
-});
-						</code></pre>
-					</section>
-				</section>
-
-				<section>
-					<section>
 						<h2>Graphics</h2>
 						<p>Making FirefoxOS beautiful.</p>
 					</section>
@@ -524,6 +525,14 @@ this.addEventListener('fetch', function(event) {
 					<section>
 						<h2>Pre-allocated Process</h2>
 						<p>A process is created after app launch, and waits for the next process to take its place.</p>
+					</section>
+					<section>
+						<h2>Hardware Accelerated Animations</h2>
+						<ul>
+							<li>Use CSS transforms up improve animations.</li>
+							<li>Uses the GPU instead of CPU to perform the transition.</li>
+							<li>Paint flashing tool to debug this.</li>
+						</ul>
 					</section>
 				</section>
 
